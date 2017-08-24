@@ -6,6 +6,7 @@ const axios = require('axios')
 const cors =require('cors')
 var OAuth = require('oauth');
 
+
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -18,4 +19,8 @@ app.use('/search',search)
 
 var newTweet = require('./routers/newTweet')
 app.use('/newTweet',newTweet)
+
+
+
+
 app.listen(3000)
